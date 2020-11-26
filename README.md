@@ -6,7 +6,7 @@ https://docs.docker.com/get-docker/
 
 2. Clone docker-compose ready to this project by run command
 ```bash
-git clone https://github.com/olgakopylova/questionnaire_docker.git
+git clone https://github.com/olgakopylova/questionnaire-docker.git
 ```
 
 3. Get official mysql docker image by run command
