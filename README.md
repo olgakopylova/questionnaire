@@ -54,6 +54,8 @@ git clone https://github.com/olgakopylova/questionnaire.git
 4. Change DB connection param to your own in file class/DB.php (lines 5-7)
 
 5. Init DB by run command
+```bash
 php db_init.php
+```
 
 6. Open browser and go to domainname.local (as example) 
