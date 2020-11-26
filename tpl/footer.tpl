@@ -20,6 +20,6 @@
     <hr>
 </div>
 
-<footer class="container">
+<div class="container">
     <p style="text-align: end;">Created by Olga Kopylova 2020</p>
-</footer>
+</div>

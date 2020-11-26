@@ -19,6 +19,7 @@ body {
 }
 .footer {
     flex: 0 0 auto;
+    padding-left: 25px;
 }
 .card{
     margin: 10px;
@@ -40,8 +41,12 @@ h1{
     text-align: center;
 }
 .jumbotron{
-    min-height: 800px !important;
+    min-height: 900px !important;
+    padding-top: 150px;
 }
 label{
     font-weight: bold;
+}
+.navbar-brand{
+    white-space: normal !important;
 }

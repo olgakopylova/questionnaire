@@ -2,19 +2,28 @@
 
 class DB
 {
-    private $host = '127.0.0.1';
+    private $host = 'db';
     private $log = 'root';
-    private $pass = 'root';
+    private $pass = 'example';
     private $db;
 
-    public function __construct()
+    public function __construct($dbname='questionnaire')
     {
         try {
-            $this->db = new mysqli($this->host, $this->log, $this->pass, 'questionnaire');
+            if($dbname!=null)
+                $this->db = new mysqli($this->host, $this->log, $this->pass, $dbname);
+            else
+                $this->db = new mysqli($this->host, $this->log, $this->pass);
             $this->db->query("SET NAMES 'utf8' ");
         } catch (Exception $ex) {
             var_dump($ex);
         }
+    }
+
+    public function changeConnection($dbname){
+        $this->db->close();
+        $this->db = new mysqli($this->host, $this->log, $this->pass, $dbname);
+        $this->db->query("SET NAMES 'utf8' ");
     }
 
     /**

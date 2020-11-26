@@ -54,6 +54,15 @@ class Questionnaire
             $errors['user_patronymic_err'] = 'Недопустимый символ';
         if($this->isCorrectString($data['user_question'])!=1&&$data['user_question'])
             $errors['user_question_err'] = 'Недопустимый символ';
+        if(is_numeric($data['user_age'])){
+            if($data['user_age'] <= 0)
+                $errors['user_age_err'] = 'Возраст не может быть меньше нуля';
+            if($data['user_age'] > 150)
+                $errors['user_age_err'] = 'Слишком большой возраст';
+        }
+        else{
+            $errors['user_age_err'] = 'Возраст должен быть числовым значением';
+        }
 
         return $errors;
     }

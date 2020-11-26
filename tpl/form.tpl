@@ -27,7 +27,9 @@
     </div>
     <div class="form-group required">
         <label for="user_age" class="control-label">Возраст</label>
-        <input type="text" class="form-control" name="user_age" id="user_age" value="<?php echo $user_age;?>" required>
+        <input type="text" class="form-control <?php echo isset($user_age_err)?'is-invalid':'';?>"
+               name="user_age" id="user_age" value="<?php echo $user_age;?>" required>
+        <div class="invalid-feedback"><?php echo $user_age_err;?></div>
     </div>
     <div class="form-group required">
         <label for="user_living_town" class="control-label">Город</label>
